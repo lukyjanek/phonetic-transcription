@@ -2,3 +2,6 @@ Version 1 (v1) [released in 7 Sept 2019]
 - create script for automatic phonetic transcription of Czech according to listed linguistic works (in README.md)
 - create script for automatic phonetic transcription of Slovak according to listed linguistic works (in README.md)
 - create script for automatic phonetic transcription of Polish according to listed linguistic works (in README.md)
+
+Version 2 (v2) [still open]
+- add phonetic transcription of some foreign words in Czech

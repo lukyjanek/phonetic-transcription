@@ -1,7 +1,7 @@
 # Automatic phonetic transcription of the Czech, Slovak and Polish languages
 This repository contains codes of rule-based approach to the phonetics transcription of the Czech, Slovak and Polish languages into the [International Phonetic Alphabet](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet) (IPA). Used rules and IPA signs are based on the phonologic, phonetic, and orthoepic studies (listed below) of the mentioned West-Slavic languages.
 
-`CHANGELOG.txt` contains list of changes in each version. Current version is this one (version 1).
+Older versions and their evaluations can be found in GitHub releases. `CHANGELOG.txt` contains list of changes in each version. Current (still open) version is this one (version 2).
 
 ## Usage
 These scripts can be used both as imported in any project, and as shell scripts. Bellow, three examples how to use them are shown.

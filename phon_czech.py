@@ -41,7 +41,41 @@ def ipa_czech(text):
                       'hetero', 'homo', 'hypo', 'iso', 'kvadro', 'makro',
                       'mezzo', 'mikro', 'proto', 'pseudo', 'retro', 'mono')
 
-    # TODO: foreign words
+    # foreign words
+    fw = {'nism': 'nysm', 'anti': 'anty', 'akti': 'akty', 'atik': 'atyk',
+          'tick': 'tyck', 'kandi': 'kandy', 'nie': 'nye', 'nii': 'nyy',
+          'arkti': 'arkty', 'atrkti': 'atrakty', 'audi': 'audy',
+          'automati': 'automaty', 'causa': 'kauza', 'celsia': 'celzia',
+          'chil': 'čil', 'danih': 'danyh', 'efektiv': 'efektyv',
+          'finiti': 'finyty', 'dealer': 'd ii ler', 'diag': 'dyag',
+          'diet': 'dyet', 'dif': 'dyf', 'dig': 'dyg', 'dikt': 'dykt',
+          'dilet': 'dylet', 'dipl': 'dypl', 'dirig': 'dyryg', 'disk': 'dysk',
+          'display': 'dysplej', 'disp': 'dysp', 'dist': 'dyst',
+          'divide': 'dyvide', 'dukti': 'dukty', 'edic': 'edyc',
+          'error': 'eror', 'elektroni': 'elektrony', 'energetik': 'energetyk',
+          'etik': 'etyk', 'femini': 'feminy', 'finiš': 'finyš',
+          'monie': 'monye', 'geneti': 'genety', 'gieni': 'gieny',
+          'imuni': 'imuny', 'indiv': 'indyv', 'inici': 'inyci',
+          'investi': 'investy', 'karati': 'karaty', 'kardi': 'kardy',
+          'klaus': 'klauz', 'komuni': 'komuny', 'kondi': 'kondy',
+          'kredit': 'kredyt', 'kriti': 'krity', 'komodit': 'komodyt',
+          'konsor': 'konzor', 'leasing': 'lízing', 'giti': 'gity',
+          'medi': 'medy', 'motiv': 'motyv', 'manag': 'menedž', 'nsti': 'nsty',
+          'temati': 'tematy', 'mini': 'miny', 'minus': 'mýnus', 'ing': 'yng',
+          'gativ': 'gatyv', 'mati': 'maty', 'manip': 'manyp',
+          'moderni': 'moderny', 'organi': 'organy', 'optim': 'optym',
+          'panick': 'panyck', 'pediatr': 'pedyatr', 'perviti': 'pervity',
+          'politi': 'polity', 'pozit': 'pozyt', 'privati': 'privaty',
+          'prostitu': 'prostytu', 'radik': 'radyk', 'radio': 'radyo',
+          'rádio': 'rádyo', 'relativ': 'relatyv', 'restitu': 'restytu',
+          'rock': 'rok', 'rutin': 'rutyn', 'shop': 'šop', 'softwar': 'softver',
+          'sortim': 'sortym', 'spektiv': 'spektyv', 'superlativ': 'superlatyv',
+          'nj': 'ň', 'statisti': 'statysty', 'stik': 'styk',
+          'stimul': 'stymul', 'studi': 'study', 'techni': 'techny',
+          'telecom': 'telekom', 'telefoni': 'telefony', 'tetik': 'tetyk',
+          'textil': 'textyl', 'tibet': 'tybet', 'tibor': 'tybor',
+          'tirany': 'tyrany', 'titul': 'tytul', 'tradi': 'trady',
+          'univer': 'unyver', 'venti': 'venty', 'vertik': 'vertyk'}
 
     # split on clauses
     text = text.replace('...', '.')
@@ -55,6 +89,10 @@ def ipa_czech(text):
         if not part:
             transcripted_parts.append('')
             continue
+
+        # prepare foreign word transcription
+        for f in fw:
+            part = part.replace(f, fw[f])
 
         # prepare text to list of letters to transcript
         part = part.lower().strip()
