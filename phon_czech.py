@@ -145,7 +145,7 @@ def ipa_czech(text):
                             ipa[i] = vowels[part[i]] + 'u̯'
                             ipa[i+1] = ''
                     # i/í preceeding
-                    elif part[i-1] in 'ií':
+                    elif i > 0 and part[i-1] in 'ií':
                         ipa[i] = 'j ' + vowels[part[i]]
                     # otherwise
                     else:
