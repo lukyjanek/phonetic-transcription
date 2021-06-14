@@ -161,7 +161,6 @@ def ipa_polish(text):
                         ipa[i] = sonors[part[i]]
                     # choose type of assimilation
                     elif voice is None:
-                        print('tady')
                         # regression or progression of w
                         if part[i] in 'w' and i > 0:
                             if part[i-1] in 'tks':
