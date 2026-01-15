@@ -48,7 +48,7 @@ def ipa_czech(text):
           'arkti': 'arkty', 'atrkti': 'atrakty', 'audi': 'audy',
           'automati': 'automaty', 'causa': 'kauza', 'celsia': 'celzia',
           'chil': 'čil', 'danih': 'danyh', 'efektiv': 'efektyv',
-          'finiti': 'finyty', 'dealer': 'd ii ler', 'diag': 'dyag',
+          'finiti': 'finyty', 'deal': 'dýl', 'diag': 'dyag',
           'diet': 'dyet', 'dif': 'dyf', 'dig': 'dyg', 'dikt': 'dykt',
           'dilet': 'dylet', 'dipl': 'dypl', 'dirig': 'dyryg', 'disk': 'dysk',
           'display': 'dysplej', 'disp': 'dysp', 'dist': 'dyst',
@@ -275,3 +275,4 @@ if __name__ == '__main__':
         else:
             print('Error: Use script in pipeline or give the path '
                   'to the relevant file in the first argument.')
+
